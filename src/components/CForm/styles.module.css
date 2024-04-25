@@ -1,0 +1,13 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+@media(min-width: 1023px) {
+    .form {
+        padding: 0;
+    }
+}

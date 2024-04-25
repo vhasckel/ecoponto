@@ -1,0 +1,27 @@
+.form {
+    width: 40%;
+    text-align: center;
+}
+
+.form h2 {
+    padding-bottom: 1em;
+}
+
+.login {
+    padding: 1em;
+}
+
+.login a {
+    font-weight: 700;
+    color: #4caa66;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
