@@ -1,8 +1,14 @@
+import { Outlet } from "react-router";
 import "./App.css";
-import LoginPage from "./components/pages/Login";
+import Header from "./components/Header";
 
 function App() {
-  return <LoginPage />;
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;
