@@ -10,13 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@date-io/date-fns": "^3.0.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.3",
     "react-router-dom": "^6.23.0",
     "sort-by": "^1.2.0"
   },
