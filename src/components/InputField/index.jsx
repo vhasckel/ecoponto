@@ -9,6 +9,7 @@ function InputField({
   errors,
   rules,
   onBlur,
+  value,
 }) {
   return (
     <TextField
@@ -17,6 +18,7 @@ function InputField({
       label={label}
       type={type}
       onBlur={onBlur}
+      value={value}
       variant="outlined"
       error={!!errors[name]}
       helperText={errors[name] ? errors[name].message : ""}

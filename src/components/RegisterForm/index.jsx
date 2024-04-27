@@ -1,7 +1,9 @@
-import { useForm } from "react-hook-form";
+import { useForm, useFormContext } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { getCep } from "../../utils/getCEP";
 import { genderOptions, states } from "../../utils/selectOptions";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
 import CButton from "../CButton";
 import InputField from "../InputField";
 import SelectField from "../SelectField";
@@ -10,6 +12,8 @@ import validationRules from "../../utils/validationRules";
 import styles from "./styles.module.css";
 
 function RegisterForm() {
+  const { registerUser } = useContext(UserContext);
+
   const {
     setValue,
     handleSubmit,
@@ -24,7 +28,7 @@ function RegisterForm() {
   };
 
   const onSubmit = (data) => {
-    console.log(data);
+    registerUser(data);
   };
   return (
     <div>

@@ -1,8 +1,9 @@
 import { Button } from "@mui/material";
 
-function CButton({ type, text }) {
+function CButton({ type, text, onClick }) {
   return (
     <Button
+      onClick={onClick}
       type={type}
       style={{
         padding: "14px",

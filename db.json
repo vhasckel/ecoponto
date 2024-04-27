@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "vanessa",
+      "email": "vanessa@email.com",
+      "password": "4Testeee"
+    },
+    {
+      "id": "3",
+      "name": "kamilla",
+      "email": "kamilla@email.com",
+      "password": "4Testeee"
+    },
+    {
+      "name": "rioni",
+      "email": "rioni@email.com",
+      "password": "4Testeee",
+      "id": "4"
+    },
+    {
+      "name": "anderson",
+      "email": "anderson@email.com",
+      "password": "4Testeee",
+      "id": "5"
+    },
+    {
+      "id": "92fa",
+      "name": "Vanessa Hasckel",
+      "gender": "SC",
+      "cpf": "09985444930",
+      "birth": "0905200",
+      "email": "vanessahasckel00@hotmail.com",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "street": "Rua Professora Enoé Schutel",
+      "password": "2Testeeeeeee",
+      "state": "SC"
+    },
+    {
+      "id": "148a",
+      "name": "Vanessa Hasckel",
+      "gender": "SC",
+      "cpf": "09985444930",
+      "birth": "0905200",
+      "email": "vanessahasckel00@hotmail.com",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "street": "Rua Professora Enoé Schutel",
+      "password": "1Atommmmmm",
+      "state": "SC"
+    },
+    {
+      "id": "dd85",
+      "name": "teste",
+      "gender": "SC",
+      "cpf": "09985444930",
+      "birth": "0905200",
+      "email": "teste@email.com",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "street": "Rua Professora Enoé Schutel",
+      "password": "1Aaaaaaa",
+      "state": "SC"
+    }
+  ]
+}

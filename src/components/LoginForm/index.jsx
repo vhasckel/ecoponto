@@ -1,13 +1,16 @@
-import React from "react";
-import InputField from "../InputField";
-import { useForm } from "react-hook-form";
-import CButton from "../CButton";
-
-import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
+import InputField from "../InputField";
+import CButton from "../CButton";
 import validationRules from "../../utils/validationRules";
 
+import styles from "./styles.module.css";
+
 function LoginForm() {
+  const { login } = useContext(UserContext);
+
   const {
     handleSubmit,
     register,
@@ -15,7 +18,7 @@ function LoginForm() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    login(data.email, data.password);
   };
   return (
     <div className={styles.container}>
@@ -25,7 +28,6 @@ function LoginForm() {
           name="email"
           label="E-mail"
           type="email"
-          className="inputRounded"
           errors={errors}
           rules={validationRules.email}
         />
@@ -34,7 +36,6 @@ function LoginForm() {
           name="password"
           label="Senha"
           type="password"
-          className="inputRounded"
           errors={errors}
           rules={validationRules.password}
         />
