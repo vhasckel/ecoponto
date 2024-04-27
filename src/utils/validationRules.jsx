@@ -1,5 +1,4 @@
-// validationRules.js
-export const validationRules = {
+const validationRules = {
   name: {
     required: "Este campo é obrigatório",
     minLength: {
@@ -53,3 +52,5 @@ export const validationRules = {
     },
   },
 };
+
+export default validationRules;
