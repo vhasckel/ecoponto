@@ -5,7 +5,6 @@ function CButton({ type, text }) {
     <Button
       type={type}
       style={{
-        borderRadius: "40px",
         padding: "14px",
         backgroundColor: "#4caa66",
       }}

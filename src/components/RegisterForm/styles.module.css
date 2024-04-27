@@ -17,11 +17,22 @@
     color: #4caa66;
 }
 
+.adress {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left,
+.right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 @media(min-width: 769px) {
     .form {
         padding: 0;
         width: 600px;
     }
-
-
 }

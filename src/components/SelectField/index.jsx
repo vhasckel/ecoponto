@@ -1,17 +1,20 @@
 import { MenuItem, Select } from "@mui/material";
 
-function SelectField({ value, onChange, register }) {
+function SelectField({ value, onChange, register, label, options }) {
   return (
     <Select
       {...register("gender")}
       labelId="gender-select-label"
+      label={label}
       id="gender-select"
       value={value}
       onChange={onChange}
     >
-      <MenuItem value="Feminino">Feminino</MenuItem>
-      <MenuItem value="Masculino">Masculino</MenuItem>
-      <MenuItem value="Nao Binario">Não Binário</MenuItem>
+      {options.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
     </Select>
   );
 }

@@ -5,6 +5,7 @@ import CButton from "../CButton";
 
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import validationRules from "../../utils/validationRules";
 
 function LoginForm() {
   const {
@@ -26,13 +27,7 @@ function LoginForm() {
           type="email"
           className="inputRounded"
           errors={errors}
-          rules={{
-            required: "E-mail é obrigatório",
-            pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: "Formato de e-mail inválido",
-            },
-          }}
+          rules={validationRules.email}
         />
         <InputField
           register={register}
@@ -41,18 +36,7 @@ function LoginForm() {
           type="password"
           className="inputRounded"
           errors={errors}
-          rules={{
-            required: "Senha é obrigatória",
-            minLength: {
-              value: 8,
-              message: "A senha deve ter pelo menos 8 caracteres",
-            },
-            pattern: {
-              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
-              message:
-                "A senha deve conter pelo menos uma letra maiúscula, uma minúscula e um número",
-            },
-          }}
+          rules={validationRules.password}
         />
         <CButton type="submit" text="Entrar" />
       </form>

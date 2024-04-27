@@ -1,25 +1,27 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { getCep } from "../../utils/getCEP";
+import { genderOptions, states } from "../../utils/selectOptions";
 import CButton from "../CButton";
 import InputField from "../InputField";
 import SelectField from "../SelectField";
+import validationRules from "../../utils/validationRules";
 
 import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
 
 function RegisterForm() {
   const {
+    setValue,
     handleSubmit,
     register,
     getValues,
     formState: { errors },
-  } = useForm({
-    mode: "onBlur",
-    defaultValues: {
-      gender: "Feminino",
-    },
-  });
+  } = useForm();
 
-  const genderValue = getValues("gender");
+  const handleCep = async () => {
+    const cep = getValues("cep");
+    await getCep(cep, setValue);
+  };
 
   const onSubmit = (data) => {
     console.log(data);
@@ -32,41 +34,25 @@ function RegisterForm() {
           name="name"
           label="Nome Completo"
           type="text"
-          className="inputRounded"
           errors={errors}
-          rules={{
-            required: "Este campo é obrigatório",
-            minLength: {
-              value: 3,
-              message: "O nome deve ter pelo menos 3 caracteres",
-            },
-            maxLength: {
-              value: 20,
-              message: "O nome não pode ter mais de 20 caracteres",
-            },
-          }}
+          rules={validationRules.name}
         />
 
-        <SelectField value={genderValue} register={register} />
+        <SelectField
+          register={register}
+          label="Gênero"
+          value={genderOptions[0].value}
+          onChange={(event) => register("gender").onChange(event)}
+          options={genderOptions}
+        />
 
         <InputField
           register={register}
           name="cpf"
           label="CPF"
           type="number"
-          className="inputRounded"
           errors={errors}
-          rules={{
-            required: "CPF é obrigatório",
-            minLength: {
-              value: 11,
-              message: "O CPF deve ter 11 caracteres",
-            },
-            maxLength: {
-              value: 11,
-              message: "O CPF deve ter 11 caracteres",
-            },
-          }}
+          rules={validationRules.cpf}
         />
 
         <InputField
@@ -74,7 +60,6 @@ function RegisterForm() {
           name="birth"
           label="Data de nascimento"
           type="text"
-          className="inputRounded"
           errors={errors}
         />
         <InputField
@@ -82,15 +67,8 @@ function RegisterForm() {
           name="email"
           label="E-mail"
           type="email"
-          className="inputRounded"
           errors={errors}
-          rules={{
-            required: "E-mail é obrigatório",
-            pattern: {
-              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: "Formato de e-mail inválido",
-            },
-          }}
+          rules={validationRules.email}
         />
 
         <InputField
@@ -98,40 +76,56 @@ function RegisterForm() {
           name="cep"
           label="CEP"
           type="number"
-          className="inputRounded"
           errors={errors}
-          rules={{
-            required: "CEP é obrigatório",
-            minLength: {
-              value: 8,
-              message: "O CEP deve ter 11 caracteres",
-            },
-            maxLength: {
-              value: 8,
-              message: "O CEP deve ter 11 caracteres",
-            },
-          }}
+          rules={validationRules.cep}
+          onBlur={handleCep}
         />
+
+        <div className={styles.adress}>
+          <div className={styles.left}>
+            <InputField
+              register={register}
+              name="city"
+              label="Cidade"
+              type="text"
+              errors={errors}
+            />
+
+            <InputField
+              register={register}
+              name="neighborhood"
+              label="Bairro"
+              type="text"
+              errors={errors}
+            />
+          </div>
+          <div className={styles.right}>
+            <SelectField
+              register={register}
+              name="state"
+              label="UF"
+              type="text"
+              onChange={(event) => register("uf").onChange(event)}
+              options={states}
+            />
+
+            <InputField
+              register={register}
+              name="street"
+              label="Rua"
+              type="text"
+              errors={errors}
+            />
+          </div>
+        </div>
 
         <InputField
           register={register}
           name="password"
           label="Senha"
           type="password"
-          className="inputRounded"
           errors={errors}
-          rules={{
-            required: "Senha é obrigatória",
-            minLength: {
-              value: 8,
-              message: "A senha deve ter pelo menos 8 caracteres",
-            },
-            pattern: {
-              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
-              message:
-                "A senha deve conter pelo menos uma letra maiúscula, uma minúscula e um número",
-            },
-          }}
+          rules={validationRules.password}
         />
 
         <CButton type="submit" text="Cadastrar" />
