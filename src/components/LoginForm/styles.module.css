@@ -1,27 +1,27 @@
+.container {
+    width: 100%;
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1em;
     gap: 1em;
+
 }
 
-.login {
+.register {
     display: flex;
     justify-content: center;
-    padding: 1em;
+    padding-top: 1em;
 }
 
-.login a {
+.register a {
     font-weight: 700;
     color: #4caa66;
 }
 
-@media(min-width: 769px) {
-    .form {
-        padding: 0;
-        width: 600px;
+@media(min-width: 1023px) {
+    .container {
+        width: 500px;
     }
-
-
 }

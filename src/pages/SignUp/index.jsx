@@ -1,15 +1,13 @@
-import ContentSection from "../../components/ContentSection";
-import FormSection from "../../components/FormSection";
+import RegisterForm from "../../components/RegisterForm";
 
 import styles from "./styles.module.css";
 
-function LoginPage() {
+function SignUpPage() {
   return (
     <div className={styles.container}>
-      <ContentSection />
-      <FormSection title={"Cadastre-se"} />
+      <RegisterForm />
     </div>
   );
 }
 
-export default LoginPage;
+export default SignUpPage;

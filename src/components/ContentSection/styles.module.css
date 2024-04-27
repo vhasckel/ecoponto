@@ -2,29 +2,33 @@
     display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .content {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        padding-bottom: 3em;
     }
 
     .content h1 {
-        font-size: 5em;
+        font-size: 3.5em;
     }
 
     .content p {
-        width: 80%;
-        text-align: justify;
         font-size: 1.2em;
-        margin-top: 1em;
     }
 
     .future {
         color: #4caa66;
     }
+}
 
-    .future {
-        color: #4caa66;
+@media(min-width: 1023px) {
+    .content {
+        width: 820px;
+    }
+
+    .content p {
+        max-width: 50ch;
+        padding-top: 1em;
     }
 }
