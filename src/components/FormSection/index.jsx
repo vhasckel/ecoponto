@@ -1,10 +1,11 @@
-import CForm from "../CForm";
+import RegisterForm from "../RegisterForm";
 import styles from "./styles.module.css";
-function FormSection() {
+
+function FormSection({ title }) {
   return (
     <div className={styles.form}>
-      <h2>Cadastre-se!</h2>
-      <CForm />
+      <h2>{title}</h2>
+      <RegisterForm />
       <div className={styles.login}>
         <span>
           Fazer <a href="#">Login</a>
