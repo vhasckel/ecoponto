@@ -1,0 +1,10 @@
+.altura {
+    padding-left: 3em;
+    padding-right: 3em;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}

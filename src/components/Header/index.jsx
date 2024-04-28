@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ProfileMenu from "../ProfileMenu";
 
 import styles from "./styles.module.css";
 
@@ -13,6 +14,7 @@ function Header() {
           />
         </Link>
       </div>
+      <ProfileMenu />
     </header>
   );
 }
