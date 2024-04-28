@@ -4,25 +4,33 @@
       "id": "2",
       "name": "vanessa",
       "email": "vanessa@email.com",
-      "password": "4Testeee"
+      "password": "4Testeee",
+      "username": "vanessa_hasckel",
+      "online": true
     },
     {
       "id": "3",
       "name": "kamilla",
       "email": "kamilla@email.com",
-      "password": "4Testeee"
+      "password": "4Testeee",
+      "username": "kamilla_sell",
+      "online": true
     },
     {
       "name": "rioni",
       "email": "rioni@email.com",
       "password": "4Testeee",
-      "id": "4"
+      "id": "4",
+      "username": "clara_rioni",
+      "online": true
     },
     {
       "name": "anderson",
       "email": "anderson@email.com",
       "password": "4Testeee",
-      "id": "5"
+      "id": "5",
+      "username": "anderson_do_carmo",
+      "online": true
     },
     {
       "id": "92fa",
@@ -36,7 +44,9 @@
       "neighborhood": "Trindade",
       "street": "Rua Professora Enoé Schutel",
       "password": "2Testeeeeeee",
-      "state": "SC"
+      "state": "SC",
+      "username": "vanessa_hasckel",
+      "online": false
     },
     {
       "id": "148a",
@@ -50,7 +60,9 @@
       "neighborhood": "Trindade",
       "street": "Rua Professora Enoé Schutel",
       "password": "1Atommmmmm",
-      "state": "SC"
+      "state": "SC",
+      "username": "vanessa_hasckel",
+      "online": false
     },
     {
       "id": "dd85",
@@ -64,7 +76,23 @@
       "neighborhood": "Trindade",
       "street": "Rua Professora Enoé Schutel",
       "password": "1Aaaaaaa",
-      "state": "SC"
+      "state": "SC",
+      "username": "vanessa_hasckel",
+      "online": false
+    }
+  ],
+  "collectionLocations": [
+    {
+      "local": "",
+      "description": "",
+      "userIdentification": "",
+      "location": [
+        {
+          "longitude": "",
+          "latitude": ""
+        }
+      ],
+      "typesOfWaste": ""
     }
   ]
 }
