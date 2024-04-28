@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0 1em;
+}
+
+.adressContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.checkbox {
+    height: 10em;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(min-width: 769px) {
+    .form {
+        padding: 0;
+        width: 468px;
+    }
+
+    .adressContainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 1em;
+        height: 200px
+    }
+}

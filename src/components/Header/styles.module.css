@@ -1,11 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #F5F5F5;
-    height: 62px;
+    background-color: #ddffe6;
+    height: 52px;
     display: flex;
     align-items: center;
     padding: 1em 1em;
+    margin-bottom: 1em;
 }
 
 .logo img {
@@ -15,6 +16,11 @@
 
 @media (min-width: 1023px) {
     .header {
-        padding: 3em;
+        padding: 2em 3em;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1em;
     }
 }

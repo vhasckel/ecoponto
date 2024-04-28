@@ -12,6 +12,7 @@ import App from "./App.jsx";
 
 import "./index.css";
 import { UserContextProvider } from "./context/UserContext.jsx";
+import LocationRegistration from "./pages/LocationRegistration/index.jsx";
 
 const PrivateRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/cadastrar-localização",
+        element: <LocationRegistration />,
       },
     ],
   },

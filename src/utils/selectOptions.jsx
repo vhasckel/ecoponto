@@ -4,6 +4,16 @@ export const genderOptions = [
   { value: "Nao Binario", label: "Não Binário" },
 ];
 
+export const checkboxesData = [
+  { label: "Vidro", name: "vidro" },
+  { label: "Metal", name: "metal" },
+  { label: "Papel", name: "papel" },
+  { label: "Plástico", name: "plastico" },
+  { label: "Orgânico", name: "organico" },
+  { label: "Baterias", name: "baterias" },
+  { label: "Óleo de cozinha", name: "oleo_de_cozinha" },
+];
+
 export const states = [
   { value: "AC", label: "Acre" },
   { value: "AL", label: "Alagoas" },
