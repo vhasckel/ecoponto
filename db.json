@@ -83,7 +83,10 @@
   ],
   "collectionLocations": [
     {
-      "local": "",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "street": "Rua Professora Enoé Schutel",
       "description": "",
       "userIdentification": "",
       "location": [

@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./styles.module.css";
 import UserCardList from "../UserCardList";
+import LocalCard from "../LocalCard";
 
 function Map() {
   const position = [51.505, -0.09];
@@ -19,6 +20,7 @@ function Map() {
             </Popup>
           </Marker>
         </MapContainer>
+        <LocalCard />
         <UserCardList />
       </div>
     </>
