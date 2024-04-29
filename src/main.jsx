@@ -13,6 +13,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { UserContextProvider } from "./context/UserContext.jsx";
 import LocationRegistration from "./pages/LocationRegistration/index.jsx";
+import { LocationContextProvider } from "./context/LocationContext.jsx";
+import { CoordinateProvider } from "./context/CoordinatesContext.jsx";
 
 const PrivateRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -60,7 +62,11 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserContextProvider>
-    <RouterProvider router={router} />
-  </UserContextProvider>
+  <CoordinateProvider>
+    <LocationContextProvider>
+      <UserContextProvider>
+        <RouterProvider router={router} />
+      </UserContextProvider>
+    </LocationContextProvider>
+  </CoordinateProvider>
 );

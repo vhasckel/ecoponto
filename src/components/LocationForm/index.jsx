@@ -1,20 +1,18 @@
 import { useForm } from "react-hook-form";
 import { getCep } from "../../utils/getCEP";
+import { useContext, useState } from "react";
+import { LocationContext } from "../../context/LocationContext";
+import { useCoordinate } from "../../context/CoordinatesContext";
 import InputField from "../InputField";
 import validationRules from "../../utils/validationRules";
 import CButton from "../CButton";
-
-import styles from "./styles.module.css";
-import {
-  Checkbox,
-  FormControlLabel,
-  FormGroup,
-  FormHelperText,
-} from "@mui/material";
-import { useState } from "react";
 import WasteTypeCheckbox from "../WasteTypeCheckbox";
 
+import styles from "./styles.module.css";
+
 function LocationForm() {
+  const { updateCoordinate } = useCoordinate();
+  const { registerLocation } = useContext(LocationContext);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -50,6 +48,11 @@ function LocationForm() {
       return; // Não submeter o formulário se não houver itens selecionados
     }
 
+    const longitude = parseFloat(data.longitude);
+    const latitude = parseFloat(data.latitude);
+
+    updateCoordinate({ longitude, latitude });
+
     const submissionData = {
       ...data,
       wasteTypes: Object.entries(selectedCheckboxes)
@@ -57,6 +60,7 @@ function LocationForm() {
         .map(([name]) => name),
     };
     console.log("Form submission data:", submissionData);
+    registerLocation(data);
   };
 
   return (
@@ -104,6 +108,22 @@ function LocationForm() {
           label="Rua"
           type="text"
           errors={errors}
+        />
+        <InputField
+          register={register}
+          name="longitude"
+          label="Longitude em graus"
+          type="text"
+          errors={errors}
+          rules={validationRules.longitude}
+        />
+        <InputField
+          register={register}
+          name="latitude"
+          label="Latitude em graus"
+          type="text"
+          errors={errors}
+          rules={validationRules.latitude}
         />
       </div>
 

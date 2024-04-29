@@ -5,6 +5,7 @@
     margin: 0 auto;
     width: fit-content;
     padding: 0 1em;
+    height: fit-content;
 }
 
 .adressContainer {
@@ -31,6 +32,5 @@
         flex-wrap: wrap;
 
         gap: 1em;
-        height: 200px
     }
 }

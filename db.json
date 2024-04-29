@@ -81,21 +81,44 @@
       "online": false
     }
   ],
-  "collectionLocations": [
+  "locations": [
     {
+      "id": "5784",
       "cep": "88036280",
       "city": "Florianópolis",
       "neighborhood": "Trindade",
+      "state": "SC",
       "street": "Rua Professora Enoé Schutel",
-      "description": "",
-      "userIdentification": "",
-      "location": [
-        {
-          "longitude": "",
-          "latitude": ""
-        }
-      ],
-      "typesOfWaste": ""
+      "longitude": "-048.675000",
+      "latitude": "-28.098883",
+      "description": "descrição",
+      "userId": "testando",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false
+    },
+    {
+      "id": "fccf",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "state": "SC",
+      "street": "Rua Professora Enoé Schutel",
+      "longitude": "-48.519933",
+      "latitude": "-27.601970",
+      "description": "descrição",
+      "userId": "teste",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false
     }
   ]
 }

@@ -62,6 +62,20 @@ const validationRules = {
       message: "O username não pode ter mais de 20 caracteres",
     },
   },
+  latitude: {
+    required: "Este campo nao pode ficar vazio",
+    pattern: {
+      value: /^-?(?:[1-8]?\d|90)\.\d+$/,
+      message: "Escreva um valor válido",
+    },
+  },
+  longitude: {
+    required: "Este campo nao pode ficar vazio",
+    pattern: {
+      value: /^-?(?:1[0-7]\d|0?\d{1,2}|180)\.\d+$/,
+      message: "Escreva um valor válido",
+    },
+  },
 };
 
 export default validationRules;
