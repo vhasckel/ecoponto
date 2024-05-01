@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { useCoordinate } from "../../context/CoordinatesContext";
 import { useContext } from "react";
 import { LocationContext } from "../../context/LocationContext";
+
 import UserCardList from "../UserCardList";
 import LocalCard from "../LocalCard";
 

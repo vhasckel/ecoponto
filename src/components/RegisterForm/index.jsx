@@ -1,9 +1,10 @@
-import { useForm, useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { getCep } from "../../utils/getCEP";
+import { useFetchCEP } from "../../hooks/useFetchCEP";
 import { genderOptions, states } from "../../utils/selectOptions";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
+
 import CButton from "../CButton";
 import InputField from "../InputField";
 import SelectField from "../SelectField";
@@ -24,7 +25,7 @@ function RegisterForm() {
 
   const handleCep = async () => {
     const cep = getValues("cep");
-    await getCep(cep, setValue);
+    await useFetchCEP(cep, setValue);
   };
 
   const onSubmit = (data) => {

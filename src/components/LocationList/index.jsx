@@ -1,21 +1,21 @@
+import { useContext } from "react";
+import { LocationContext } from "../../context/LocationContext";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
+
 import List from "@mui/material/List";
-import { Box, Container } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Typography from "@mui/material/Typography";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { useContext } from "react";
-import { LocationContext } from "../../context/LocationContext";
 import React from "react";
 import CButton from "../CButton";
 
 import styles from "./styles.module.css";
-import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
 
-function LocationList({ showDeleteButton }) {
+function LocationList() {
   const { locations, deleteLocation } = useContext(LocationContext);
   const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();

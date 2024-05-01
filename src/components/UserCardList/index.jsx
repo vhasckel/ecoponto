@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Box } from "@mui/material";
 import { UserContext } from "../../context/UserContext";
+
 import UserCard from "../../components/UserCard";
 import NoUsersFound from "../../components/NoUserFound";
 

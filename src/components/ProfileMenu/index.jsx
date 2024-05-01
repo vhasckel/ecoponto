@@ -1,10 +1,11 @@
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import { Avatar } from "@mui/material";
 import { useContext, useState } from "react";
+import { UserContext } from "../../context/UserContext";
+
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 import styles from "./styles.module.css";
-import { UserContext } from "../../context/UserContext";
 
 function ProfileMenu() {
   const { logOut } = useContext(UserContext);

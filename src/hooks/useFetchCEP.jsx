@@ -1,4 +1,4 @@
-export const getCep = async (cep, setValue) => {
+export const useFetchCEP = async (cep, setValue) => {
   if (cep) {
     try {
       const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`);

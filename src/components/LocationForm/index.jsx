@@ -1,9 +1,10 @@
 import { useForm } from "react-hook-form";
-import { getCep } from "../../utils/getCEP";
+import { useFetchCEP } from "../../hooks/useFetchCEP";
 import { useCallback, useContext, useState } from "react";
 import { LocationContext } from "../../context/LocationContext";
 import { useCoordinate } from "../../context/CoordinatesContext";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+
 import InputField from "../InputField";
 import validationRules from "../../utils/validationRules";
 import CButton from "../CButton";
@@ -33,7 +34,7 @@ function LocationForm() {
 
   const handleCep = useCallback(async () => {
     const cep = getValues("cep");
-    await getCep(cep, setValue);
+    await useFetchCEP(cep, setValue);
   }, [getValues, setValue]);
 
   const handleCheckboxChange = (event) => {
