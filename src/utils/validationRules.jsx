@@ -51,17 +51,6 @@ const validationRules = {
         "A senha deve conter pelo menos uma letra maiúscula, uma minúscula e um número",
     },
   },
-  userIdentification: {
-    required: "É necessário usermane como identificador",
-    minLength: {
-      value: 3,
-      message: "O username deve ter pelo menos 3 caracteres",
-    },
-    maxLength: {
-      value: 20,
-      message: "O username não pode ter mais de 20 caracteres",
-    },
-  },
   latitude: {
     required: "Este campo nao pode ficar vazio",
     pattern: {

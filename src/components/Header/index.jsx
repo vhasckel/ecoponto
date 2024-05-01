@@ -16,8 +16,10 @@ function Header() {
         </Link>
       </div>
       <div className={styles.navigation}>
-        <NavigationLink text={"Pontos de coleta"} />
-        <Link to="/cadastrar-localização">
+        <Link to="/lista-de-localizacoes">
+          <NavigationLink text={"Pontos de coleta"} />
+        </Link>
+        <Link to="/cadastrar-localizacao">
           <NavigationLink text={"Cadastrar ponto de coleta"} />
         </Link>
         <ProfileMenu />

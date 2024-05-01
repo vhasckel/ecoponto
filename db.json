@@ -83,42 +83,26 @@
   ],
   "locations": [
     {
-      "id": "5784",
-      "cep": "88036280",
+      "id": "02b8",
+      "cep": "88040900",
       "city": "Florianópolis",
       "neighborhood": "Trindade",
       "state": "SC",
-      "street": "Rua Professora Enoé Schutel",
-      "longitude": "-048.675000",
-      "latitude": "-28.098883",
-      "description": "descrição",
-      "userId": "testando",
-      "vidro": true,
-      "metal": false,
+      "street": "Rua Roberto Sampaio Gonzaga",
+      "latitude": "-27.604258",
+      "longitude": "-48.529526",
+      "description": "",
+      "userId": "09985444930",
+      "vidro": false,
+      "metal": true,
       "papel": false,
       "plastico": false,
       "organico": false,
       "baterias": false,
-      "oleo_de_cozinha": false
-    },
-    {
-      "id": "fccf",
-      "cep": "88036280",
-      "city": "Florianópolis",
-      "neighborhood": "Trindade",
-      "state": "SC",
-      "street": "Rua Professora Enoé Schutel",
-      "longitude": "-48.519933",
-      "latitude": "-27.601970",
-      "description": "descrição",
-      "userId": "teste",
-      "vidro": true,
-      "metal": false,
-      "papel": false,
-      "plastico": false,
-      "organico": false,
-      "baterias": false,
-      "oleo_de_cozinha": false
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "metal"
+      ]
     }
   ]
 }

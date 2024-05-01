@@ -1,0 +1,15 @@
+.adressContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+
+}
+
+@media(min-width: 769px) {
+    .adressContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+}

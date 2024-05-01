@@ -1,20 +1,25 @@
 import { useForm } from "react-hook-form";
 import { getCep } from "../../utils/getCEP";
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { LocationContext } from "../../context/LocationContext";
 import { useCoordinate } from "../../context/CoordinatesContext";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import InputField from "../InputField";
 import validationRules from "../../utils/validationRules";
 import CButton from "../CButton";
 import WasteTypeCheckbox from "../WasteTypeCheckbox";
+import AdressFields from "../AdressFields";
 
 import styles from "./styles.module.css";
 
 function LocationForm() {
   const { updateCoordinate } = useCoordinate();
-  const { registerLocation } = useContext(LocationContext);
+  const { locations, registerLocation, updateLocation } =
+    useContext(LocationContext);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const {
     setValue,
@@ -24,10 +29,12 @@ function LocationForm() {
     formState: { errors },
   } = useForm();
 
-  const handleCep = async () => {
+  useLocation(id, locations, setValue);
+
+  const handleCep = useCallback(async () => {
     const cep = getValues("cep");
     await getCep(cep, setValue);
-  };
+  }, [getValues, setValue]);
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
@@ -59,73 +66,24 @@ function LocationForm() {
         .filter(([, checked]) => checked)
         .map(([name]) => name),
     };
-    console.log("Form submission data:", submissionData);
-    registerLocation(data);
+
+    if (id) {
+      // Se temos um ID, significa que estamos editando
+      console.log(id);
+      updateLocation(id, submissionData);
+    } else {
+      // Se não temos um ID, estamos criando um novo
+      registerLocation(submissionData);
+    }
+
+    navigate("/"); // Redirecionar após salvar
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-      <h2>Cadastrar ponto de coleta</h2>
+      <h2>{id ? "Atualizar ponto de coleta" : "Cadastrar ponto de coleta"}</h2>
 
-      <div className={styles.adressContainer}>
-        <InputField
-          register={register}
-          name="cep"
-          label="CEP"
-          type="number"
-          errors={errors}
-          rules={validationRules.cep}
-          onBlur={handleCep}
-        />
-
-        <InputField
-          register={register}
-          name="city"
-          label="Cidade"
-          type="text"
-          errors={errors}
-        />
-
-        <InputField
-          register={register}
-          name="neighborhood"
-          label="Bairro"
-          type="text"
-          errors={errors}
-        />
-
-        <InputField
-          register={register}
-          name="state"
-          label="UF"
-          type="text"
-          errors={errors}
-        />
-
-        <InputField
-          register={register}
-          name="street"
-          label="Rua"
-          type="text"
-          errors={errors}
-        />
-        <InputField
-          register={register}
-          name="longitude"
-          label="Longitude em graus"
-          type="text"
-          errors={errors}
-          rules={validationRules.longitude}
-        />
-        <InputField
-          register={register}
-          name="latitude"
-          label="Latitude em graus"
-          type="text"
-          errors={errors}
-          rules={validationRules.latitude}
-        />
-      </div>
+      <AdressFields register={register} errors={errors} handleCep={handleCep} />
 
       <InputField
         register={register}
@@ -138,10 +96,10 @@ function LocationForm() {
       <InputField
         register={register}
         name="userId"
-        label="Identificador do Usuário"
+        label="Identificador do Usuário (CPF)"
         type="text"
         errors={errors}
-        rules={validationRules.userIdentification}
+        rules={validationRules.cpf}
       />
 
       <h4>Tipos de resíduo</h4>
@@ -153,7 +111,7 @@ function LocationForm() {
         formSubmitted={formSubmitted}
       />
 
-      <CButton type="submit" text="Cadastrar" />
+      <CButton type="submit" text={id ? "Atualizar" : "Cadastrar"} />
     </form>
   );
 }

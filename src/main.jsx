@@ -4,17 +4,18 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+import { LocationContextProvider } from "./context/LocationContext.jsx";
+import { CoordinateProvider } from "./context/CoordinatesContext.jsx";
+import { UserContextProvider } from "./context/UserContext.jsx";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/Home/index.jsx";
 import SignInPage from "./pages/SignIn/index.jsx";
 import SignUpPage from "./pages/SignUp/index.jsx";
+import LocationRegistration from "./pages/LocationRegistration/index.jsx";
+import LocationPage from "./pages/LocationList/index.jsx";
 import App from "./App.jsx";
 
 import "./index.css";
-import { UserContextProvider } from "./context/UserContext.jsx";
-import LocationRegistration from "./pages/LocationRegistration/index.jsx";
-import { LocationContextProvider } from "./context/LocationContext.jsx";
-import { CoordinateProvider } from "./context/CoordinatesContext.jsx";
 
 const PrivateRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -54,8 +55,16 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/cadastrar-localização",
+        path: "/cadastrar-localizacao",
         element: <LocationRegistration />,
+      },
+      {
+        path: "/editar-localização/:id",
+        element: <LocationRegistration />,
+      },
+      {
+        path: "/lista-de-localizacoes",
+        element: <LocationPage />,
       },
     ],
   },
