@@ -1,11 +1,13 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Avatar } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import styles from "./styles.module.css";
+import { UserContext } from "../../context/UserContext";
 
 function ProfileMenu() {
+  const { logOut } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -36,7 +38,7 @@ function ProfileMenu() {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={logOut}>Logout</MenuItem>
       </Menu>
     </div>
   );
