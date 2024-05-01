@@ -35,7 +35,7 @@ function extractInitials(name) {
 }
 
 function UserCard({ user }) {
-  const { online, username, name } = user;
+  const { online, name } = user;
   const initials = extractInitials(name);
 
   return (
@@ -43,7 +43,7 @@ function UserCard({ user }) {
       <Typography variant="subtitle1" color="text.secondary">
         {online ? "Online" : "Offline"}
       </Typography>
-      <Typography variant="subtitle1">{username}</Typography>
+      <Typography variant="subtitle1">{name}</Typography>
     </UserCardStructure>
   );
 }

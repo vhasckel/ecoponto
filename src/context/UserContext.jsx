@@ -41,11 +41,23 @@ export const UserContextProvider = ({ children }) => {
     }
   };
 
-  const registerUser = async (user) => {
+  const registerUser = async (newUser) => {
+    const existingCPF = users.find((user) => user.cpf === newUser.cpf);
+    const existingEmail = users.find((user) => user.email === newUser.email);
+
+    if (existingCPF) {
+      alert("CPF já cadastrado");
+      return;
+    }
+
+    if (existingEmail) {
+      alert("Email já cadastrado");
+      return;
+    }
     try {
       await fetch("http://localhost:3000/users", {
         method: "POST",
-        body: JSON.stringify(user),
+        body: JSON.stringify(newUser),
         headers: { "Content-Type": "application/json" },
       });
 

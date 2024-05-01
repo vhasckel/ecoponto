@@ -1,84 +1,33 @@
 {
   "users": [
     {
-      "id": "2",
+      "id": "473c",
+      "name": "Heygenul",
+      "gender": "AM",
+      "cpf": "51093205008",
+      "birth": "03/02/2000",
+      "email": "Heygenul@email.com",
+      "cep": "69099787",
+      "city": "Manaus",
+      "neighborhood": "Cidade de Deus",
+      "street": "Travessa Pipira",
+      "password": "Eg+0!gBY",
+      "state": "AM",
+      "online": true
+    },
+    {
+      "id": "2520",
       "name": "vanessa",
+      "gender": "AM",
+      "cpf": "74035272086",
+      "birth": "09052000",
       "email": "vanessa@email.com",
-      "password": "4Testeee",
-      "username": "vanessa_hasckel",
-      "online": true
-    },
-    {
-      "id": "3",
-      "name": "kamilla",
-      "email": "kamilla@email.com",
-      "password": "4Testeee",
-      "username": "kamilla_sell",
-      "online": true
-    },
-    {
-      "name": "rioni",
-      "email": "rioni@email.com",
-      "password": "4Testeee",
-      "id": "4",
-      "username": "clara_rioni",
-      "online": true
-    },
-    {
-      "name": "anderson",
-      "email": "anderson@email.com",
-      "password": "4Testeee",
-      "id": "5",
-      "username": "anderson_do_carmo",
-      "online": true
-    },
-    {
-      "id": "92fa",
-      "name": "Vanessa Hasckel",
-      "gender": "SC",
-      "cpf": "09985444930",
-      "birth": "0905200",
-      "email": "vanessahasckel00@hotmail.com",
-      "cep": "88036280",
-      "city": "Florianópolis",
-      "neighborhood": "Trindade",
-      "street": "Rua Professora Enoé Schutel",
-      "password": "2Testeeeeeee",
-      "state": "SC",
-      "username": "vanessa_hasckel",
-      "online": false
-    },
-    {
-      "id": "148a",
-      "name": "Vanessa Hasckel",
-      "gender": "SC",
-      "cpf": "09985444930",
-      "birth": "0905200",
-      "email": "vanessahasckel00@hotmail.com",
-      "cep": "88036280",
-      "city": "Florianópolis",
-      "neighborhood": "Trindade",
-      "street": "Rua Professora Enoé Schutel",
-      "password": "1Atommmmmm",
-      "state": "SC",
-      "username": "vanessa_hasckel",
-      "online": false
-    },
-    {
-      "id": "dd85",
-      "name": "teste",
-      "gender": "SC",
-      "cpf": "09985444930",
-      "birth": "0905200",
-      "email": "teste@email.com",
-      "cep": "88036280",
-      "city": "Florianópolis",
-      "neighborhood": "Trindade",
-      "street": "Rua Professora Enoé Schutel",
-      "password": "1Aaaaaaa",
-      "state": "SC",
-      "username": "vanessa_hasckel",
-      "online": false
+      "cep": "69099787",
+      "city": "Manaus",
+      "neighborhood": "Cidade de Deus",
+      "street": "Travessa Pipira",
+      "password": "Aaaaddef4",
+      "state": "AM"
     }
   ],
   "locations": [
