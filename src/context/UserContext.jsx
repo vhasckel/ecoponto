@@ -41,6 +41,11 @@ export const UserContextProvider = ({ children }) => {
     }
   };
 
+  const logOut = () => {
+    localStorage.removeItem("isAuthenticated");
+    window.location.href = "/login";
+  };
+
   const registerUser = async (newUser) => {
     const existingCPF = users.find((user) => user.cpf === newUser.cpf);
     const existingEmail = users.find((user) => user.email === newUser.email);
@@ -71,7 +76,7 @@ export const UserContextProvider = ({ children }) => {
     }
   };
   return (
-    <UserContext.Provider value={{ users, login, registerUser }}>
+    <UserContext.Provider value={{ users, login, registerUser, logOut }}>
       {children}
     </UserContext.Provider>
   );
