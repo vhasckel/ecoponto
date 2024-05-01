@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useFetchCEP } from "../../hooks/useFetchCEP";
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useContext, useState, useEffect } from "react";
 import { LocationContext } from "../../context/LocationContext";
 import { useCoordinate } from "../../context/CoordinatesContext";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import InputField from "../InputField";
 import validationRules from "../../utils/validationRules";
@@ -19,6 +19,7 @@ function LocationForm() {
     useContext(LocationContext);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -29,8 +30,6 @@ function LocationForm() {
     getValues,
     formState: { errors },
   } = useForm();
-
-  useLocation(id, locations, setValue);
 
   const handleCep = useCallback(async () => {
     const cep = getValues("cep");
@@ -44,6 +43,29 @@ function LocationForm() {
       [name]: checked,
     }));
   };
+
+  //useEffect para redirecionar para a página de edição com os dadso já preenchidos
+  useEffect(() => {
+    if (id) {
+      setIsEditing(true);
+      const existingLocation = locations.find((loc) => loc.id === id);
+      if (existingLocation) {
+        setValue("description", existingLocation.description);
+        setValue("userId", existingLocation.userId);
+        setValue("cep", existingLocation.cep);
+        setValue("street", existingLocation.street);
+        setValue("neighborhood", existingLocation.neighborhood);
+        setValue("longitude", existingLocation.longitude.toString());
+        setValue("latitude", existingLocation.latitude.toString());
+
+        const wasteTypeSelections = {};
+        existingLocation.wasteTypes.forEach((wasteType) => {
+          wasteTypeSelections[wasteType] = true;
+        });
+        setSelectedCheckboxes(wasteTypeSelections);
+      }
+    }
+  }, [id, locations, setValue]);
 
   const onSubmit = (data) => {
     setFormSubmitted(true); // Indicar que uma tentativa de submissão foi feita
@@ -68,6 +90,14 @@ function LocationForm() {
         .map(([name]) => name),
     };
 
+    if (isEditing) {
+      // Atualizar localização
+      updateLocation(id, submissionData);
+    } else {
+      // Registrar nova localização
+      registerLocation(submissionData);
+    }
+
     if (id) {
       // Se temos um ID, significa que estamos editando
       console.log(id);
@@ -82,7 +112,9 @@ function LocationForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-      <h2>{id ? "Atualizar ponto de coleta" : "Cadastrar ponto de coleta"}</h2>
+      <h2>
+        {isEditing ? "Atualizar ponto de coleta" : "Cadastrar ponto de coleta"}
+      </h2>
 
       <AdressFields register={register} errors={errors} handleCep={handleCep} />
 
