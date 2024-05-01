@@ -15,6 +15,17 @@ const fetchUsers = async (setUsers) => {
 
 export const UserContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    const storedCPF = localStorage.getItem("userCPF");
+    if (storedCPF) {
+      const foundUser = users.find((user) => user.cpf === storedCPF);
+      if (foundUser) {
+        setCurrentUser(foundUser);
+      }
+    }
+  }, [users]);
 
   useEffect(() => {
     fetchUsers(setUsers);
@@ -28,6 +39,8 @@ export const UserContextProvider = ({ children }) => {
 
       if (user) {
         if (user.password === password) {
+          localStorage.setItem("userCPF", user.cpf);
+          setCurrentUser(user);
           localStorage.setItem("isAuthenticated", "true");
           window.location.href = "/";
         } else {
@@ -43,6 +56,8 @@ export const UserContextProvider = ({ children }) => {
 
   const logOut = () => {
     localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("userCPF");
+    setCurrentUser(null);
     window.location.href = "/login";
   };
 
@@ -76,7 +91,9 @@ export const UserContextProvider = ({ children }) => {
     }
   };
   return (
-    <UserContext.Provider value={{ users, login, registerUser, logOut }}>
+    <UserContext.Provider
+      value={{ users, login, registerUser, logOut, currentUser }}
+    >
       {children}
     </UserContext.Provider>
   );

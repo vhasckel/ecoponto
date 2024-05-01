@@ -13,13 +13,19 @@ import CButton from "../CButton";
 
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 
 function LocationList({ showDeleteButton }) {
   const { locations, deleteLocation } = useContext(LocationContext);
+  const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleEdit = (id) => {
     navigate(`/editar-localização/${id}`);
+  };
+
+  const handleDelete = (id) => {
+    deleteLocation(id);
   };
   return (
     <List sx={{ width: "100%", bgcolor: "background.paper" }}>
@@ -44,16 +50,20 @@ function LocationList({ showDeleteButton }) {
               }
             />
           </ListItem>
-          {showDeleteButton && (
-            <div className={styles.btns}>
-              <CButton onClick={() => handleEdit(location.id)} text="Editar" />
-              <CButton
-                onClick={() => deleteLocation(location.id)}
-                text="Deletar"
-                color={"error"}
-              />
-            </div>
-          )}
+          {currentUser &&
+            currentUser.cpf === location.userId && ( // Verificar se o usuário pode editar ou deletar
+              <div className={styles.btns}>
+                <CButton
+                  onClick={() => handleEdit(location.id)}
+                  text="Editar"
+                />
+                <CButton
+                  onClick={() => handleDelete(location.id)}
+                  text="Deletar"
+                  color={"error"}
+                />
+              </div>
+            )}
           <Divider variant="inset" component="li" />
         </React.Fragment>
       ))}

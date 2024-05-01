@@ -52,6 +52,50 @@
       "wasteTypes": [
         "metal"
       ]
+    },
+    {
+      "id": "843e",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "state": "SC",
+      "street": "Rua Professora Enoé Schutel",
+      "latitude": "-27.674269",
+      "longitude": "-48.519934",
+      "description": "descrição",
+      "userId": "74035272086",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "vidro"
+      ]
+    },
+    {
+      "id": "4041",
+      "cep": "88470000",
+      "city": "Rancho Queimado ",
+      "neighborhood": "centro",
+      "state": "SC ",
+      "street": "leonardo sell",
+      "latitude": "-27.674269",
+      "longitude": "-48.519934",
+      "description": "",
+      "userId": "74035272086",
+      "vidro": false,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": true,
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "baterias"
+      ]
     }
   ]
 }
