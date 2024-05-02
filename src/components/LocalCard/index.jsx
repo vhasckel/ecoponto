@@ -1,21 +1,17 @@
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import LocationList from "../../components/LocationList";
-import { styled } from "@mui/system";
 
-const StyledCard = styled(Card)`
-  padding: 1em;
-  width: 30em;
-`;
+import styles from "./styles.module.css";
 
 const LocalCard = () => {
   return (
-    <StyledCard>
-      <Typography component="div" variant="h5">
+    <div className={styles.container}>
+      <Typography component="div" variant="h5" paddingBottom="1em">
         Locais cadastrados
       </Typography>
       <LocationList showDeleteButton={false} />
-    </StyledCard>
+    </div>
   );
 };
 

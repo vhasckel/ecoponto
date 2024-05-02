@@ -1,14 +1,15 @@
 import React from "react";
 import LoginForm from "../../components/LoginForm";
-import ContentSection from "../../components/ContentSection";
 
 import styles from "./styles.module.css";
 
 function SignInPage() {
   return (
     <div className={styles.container}>
-      <ContentSection />
-      <LoginForm />
+      <div className={styles.backgroundImage}></div>
+      <div className={styles.form}>
+        <LoginForm />
+      </div>
     </div>
   );
 }

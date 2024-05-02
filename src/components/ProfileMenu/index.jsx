@@ -6,6 +6,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 function ProfileMenu() {
   const { logOut } = useContext(UserContext);
@@ -40,6 +41,12 @@ function ProfileMenu() {
         }}
       >
         <MenuItem onClick={logOut}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/lista-de-localizacoes">Pontos de coleta</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/cadastrar-localizacao">Cadastrar ponto de coleta</Link>
+        </MenuItem>
       </Menu>
     </div>
   );

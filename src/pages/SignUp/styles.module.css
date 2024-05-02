@@ -1,7 +1,13 @@
-@media(max-width: 425px) {
-    .container {
-        padding-top: 1em;
-    }
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1 {
+    padding: 1em;
 }
 
 @media(min-width: 769px) {
@@ -10,10 +16,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -56px;
-    }
-
-    body {
-        overflow: hidden;
     }
 }

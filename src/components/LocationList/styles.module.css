@@ -1,6 +1,22 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 1em 0;
+    gap: 5px;
+}
+
 .btns {
     display: flex;
     gap: 1em;
-    padding: 1em;
+    padding-bottom: 1em;
     justify-content: end;
+}
+
+.adress {
+    width: 100%;
+}
+
+.adress span {
+    color: #747264;
+
 }

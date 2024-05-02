@@ -5,6 +5,8 @@ import { UserContext } from "../../context/UserContext";
 import UserCard from "../../components/UserCard";
 import NoUsersFound from "../../components/NoUserFound";
 
+import styles from "./styles.module.css";
+
 function UserCardList() {
   const { users } = useContext(UserContext);
 
@@ -13,11 +15,11 @@ function UserCardList() {
   }
 
   return (
-    <Box display="flex" flexDirection="column">
+    <div className={styles.container}>
       {users.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}
-    </Box>
+    </div>
   );
 }
 

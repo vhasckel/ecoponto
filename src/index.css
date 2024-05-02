@@ -14,16 +14,28 @@ body {
   background-color: #F5F5F5;
 }
 
-:root {
-  height: 100vh;
-}
 
 .leaflet-container {
-  height: 80vh;
-  width: 50vw;
+  height: 40vh;
+  width: 100%;
   border-radius: 2em;
 }
 
-#map {
-  height: 500px;
+@media (min-width: 769px) {
+  .leaflet-container {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1023px) {
+  .leaflet-container {
+    width: 100%;
+    border-radius: 2em;
+    height: 90vh;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

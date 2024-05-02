@@ -3,16 +3,12 @@
     flex-direction: column;
     gap: 1em;
     margin: 0 auto;
-    width: fit-content;
-    padding: 0 1em;
-    height: fit-content;
+    padding: 0 1em 1em 1em;
 }
 
 .adressContainer {
-    display: flex;
-    flex-wrap: wrap;
     gap: 1em;
-
+    width: 100%;
 }
 
 .checkbox {
@@ -22,15 +18,17 @@
 }
 
 @media(min-width: 769px) {
-    .form {
-        padding: 0;
-        width: 468px;
-    }
-
     .adressContainer {
         display: flex;
         flex-wrap: wrap;
-
         gap: 1em;
+    }
+}
+
+@media(min-width: 1023px) {
+    .form {
+
+        width: 500px;
+
     }
 }

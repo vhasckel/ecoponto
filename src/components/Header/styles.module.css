@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: #ddffe6;
     height: 52px;
     display: flex;
     align-items: center;
@@ -9,8 +8,12 @@
     margin-bottom: 1em;
 }
 
+.navigation {
+    display: none;
+}
+
 .logo img {
-    width: 42px;
+    width: 32px;
 }
 
 
@@ -22,5 +25,9 @@
     .navigation {
         display: flex;
         gap: 1em;
+    }
+
+    .logo img {
+        width: 42px;
     }
 }

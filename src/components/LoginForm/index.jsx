@@ -23,6 +23,13 @@ function LoginForm() {
   };
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        <h1>
+          Ajude a construir a cidade do{" "}
+          <span className={styles.future}>futuro</span>!
+        </h1>
+      </div>
+
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <InputField
           register={register}
@@ -40,7 +47,16 @@ function LoginForm() {
           errors={errors}
           rules={validationRules.password}
         />
-        <CButton type="submit" text="Entrar" />
+        <CButton
+          type="submit"
+          text="Entrar"
+          style={{
+            padding: "8px 10px",
+            borderRadius: "20px",
+            fontSize: ".8em",
+            backgroundColor: "#4caa66",
+          }}
+        />
       </form>
       <div className={styles.register}>
         <span>

@@ -133,7 +133,16 @@ function RegisterForm() {
           rules={validationRules.password}
         />
 
-        <CButton type="submit" text="Cadastrar" />
+        <CButton
+          type="submit"
+          text="Cadastrar"
+          style={{
+            padding: "8px 10px",
+            borderRadius: "20px",
+            fontSize: ".8em",
+            backgroundColor: "#4caa66",
+          }}
+        />
       </form>
       <div className={styles.login}>
         <span>

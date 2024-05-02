@@ -1,17 +1,13 @@
 import LocationList from "../../components/LocationList";
-import CButton from "../../components/CButton";
-import { styled } from "@mui/system";
-import { Card } from "@mui/material";
+
+import styles from "./styles.module.css";
 
 function LocationPage() {
-  const StyledCard = styled(Card)`
-    padding: 1em;
-    width: 30em;
-  `;
   return (
-    <StyledCard>
-      <LocationList showDeleteButton={true} />
-    </StyledCard>
+    <div className={styles.container}>
+      <h2>Pontos de Coleta</h2>
+      <LocationList showDeleteButton={true} />;
+    </div>
   );
 }
 
