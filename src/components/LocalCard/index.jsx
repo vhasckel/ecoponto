@@ -1,4 +1,3 @@
-import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import LocationList from "../../components/LocationList";
 
@@ -10,7 +9,7 @@ const LocalCard = () => {
       <Typography component="div" variant="h5" paddingBottom="1em">
         Locais cadastrados
       </Typography>
-      <LocationList showDeleteButton={false} />
+      <LocationList showButtons={false} />
     </div>
   );
 };
