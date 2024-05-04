@@ -16,18 +16,18 @@
       "online": true
     },
     {
-      "id": "2520",
-      "name": "vanessa",
-      "gender": "AM",
-      "cpf": "74035272086",
+      "id": "64a3",
+      "name": "teste",
+      "gender": "SC",
+      "cpf": "09985444930",
       "birth": "09052000",
-      "email": "vanessa@email.com",
-      "cep": "69099787",
-      "city": "Manaus",
-      "neighborhood": "Cidade de Deus",
-      "street": "Travessa Pipira",
-      "password": "Aaaaddef4",
-      "state": "AM"
+      "email": "teste@email.com",
+      "cep": "88036280",
+      "city": "Florianópolis",
+      "neighborhood": "Trindade",
+      "street": "Rua Professora Enoé Schutel",
+      "password": "Teste123",
+      "state": "SC"
     }
   ],
   "locations": [
@@ -54,17 +54,17 @@
       ]
     },
     {
-      "id": "843e",
-      "cep": "88036280",
-      "city": "",
-      "neighborhood": "Trindade",
-      "state": "",
-      "street": "Rua Professora Enoé Schutel",
-      "latitude": "-27.674269",
-      "longitude": "-48.519934",
-      "description": "descrição",
-      "userId": "74035272086",
-      "vidro": false,
+      "id": "2428",
+      "cep": "90680542",
+      "city": "Porto Alegre",
+      "neighborhood": "Coronel Aparício Borges",
+      "state": "RS",
+      "street": "Beco Dois",
+      "latitude": "-30.073063",
+      "longitude": "-51.196651",
+      "description": "teste",
+      "userId": "09985444930",
+      "vidro": true,
       "metal": false,
       "papel": false,
       "plastico": false,
@@ -76,17 +76,17 @@
       ]
     },
     {
-      "id": "4041",
-      "cep": "88470000",
-      "city": "",
-      "neighborhood": "centro",
-      "state": "",
-      "street": "rua teste",
-      "latitude": "-27.674269",
-      "longitude": "-48.519934",
-      "description": "",
-      "userId": "74035272086",
-      "vidro": false,
+      "id": "36c2",
+      "cep": "90680542",
+      "city": "Porto Alegre",
+      "neighborhood": "Coronel Aparício Borges",
+      "state": "RS",
+      "street": "Beco Dois",
+      "latitude": "-30.073063",
+      "longitude": "-51.196651",
+      "description": "teste",
+      "userId": "09985444930",
+      "vidro": true,
       "metal": false,
       "papel": false,
       "plastico": false,
@@ -94,7 +94,7 @@
       "baterias": false,
       "oleo_de_cozinha": false,
       "wasteTypes": [
-        "baterias"
+        "vidro"
       ]
     }
   ]

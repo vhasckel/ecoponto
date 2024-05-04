@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
 function ProfileMenu() {
-  const { logOut } = useContext(UserContext);
+  const { logOut, deleteAccount } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -46,6 +46,9 @@ function ProfileMenu() {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link to="/cadastrar-localizacao">Cadastrar ponto de coleta</Link>
+        </MenuItem>
+        <MenuItem onClick={deleteAccount}>
+          <Link to="/login">Deletar minha conta</Link>
         </MenuItem>
       </Menu>
     </div>
