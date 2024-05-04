@@ -11,17 +11,21 @@ import CButton from "../CButton";
 import styles from "./styles.module.css";
 
 function LocationList({ showButtons }) {
-  const { locations, deleteLocation } = useContext(LocationContext);
+  const { locations, deleteLocation, updateCoordinate } =
+    useContext(LocationContext);
   const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const handleEdit = (id) => {
-    navigate(`/editar-localização/${id}`);
+  const handleEdit = (id, latitude, longitude) => {
+    updateCoordinate({ latitude, longitude }); // Atualizar as coordenadas no contexto
+    navigate(`/editar-localizacao/${id}`); // Redirecionar para a página de edição
   };
 
-  const handleDelete = (id) => {
-    deleteLocation(id);
+  const goToMap = (latitude, longitude) => {
+    updateCoordinate({ latitude, longitude }); // Atualizar as coordenadas no contexto
+    navigate("/"); // Redirecionar para a página inicial
   };
+
   return (
     <div className={styles.container}>
       {locations.map((location) => (
@@ -56,8 +60,25 @@ function LocationList({ showButtons }) {
                     fontWeight: "700",
                   }}
                 />
+                <button
+                  onClick={() =>
+                    handleEdit(
+                      location.id,
+                      location.latitude,
+                      location.longitude
+                    )
+                  }
+                >
+                  Editar
+                </button>
               </div>
             )}
+
+          <button
+            onClick={() => goToMap(location.latitude, location.longitude)}
+          >
+            Ir para o Mapa
+          </button>
           <Divider variant="fullWidth " />
         </article>
       ))}

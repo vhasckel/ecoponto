@@ -96,6 +96,50 @@
       "wasteTypes": [
         "vidro"
       ]
+    },
+    {
+      "id": "9514",
+      "cep": "88470000",
+      "city": "Rancho Queimado",
+      "neighborhood": "centro",
+      "state": "SC",
+      "street": "praca leonardo sell",
+      "latitude": "-27.673339",
+      "longitude": "-49.013517",
+      "description": "",
+      "userId": "09985444930",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "vidro"
+      ]
+    },
+    {
+      "id": "3bf0",
+      "cep": "88470000",
+      "city": "Rancho Queimado",
+      "neighborhood": "centro",
+      "state": "SC",
+      "street": "praca leonardo sell",
+      "latitude": "-27.673339",
+      "longitude": "-49.013517",
+      "description": "",
+      "userId": "09985444930",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "vidro"
+      ]
     }
   ]
 }

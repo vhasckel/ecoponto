@@ -15,6 +15,10 @@ const fetchLocation = async (setLocations) => {
 
 export const LocationContextProvider = ({ children }) => {
   const [locations, setLocations] = useState([]);
+  const [coordinate, setCoordinate] = useState({
+    latitude: 51.505,
+    longitude: -0.09,
+  });
 
   useEffect(() => {
     fetchLocation(setLocations);
@@ -61,9 +65,22 @@ export const LocationContextProvider = ({ children }) => {
     }
   };
 
+  const updateCoordinate = (newLocation) => {
+    setCoordinate(newLocation);
+  };
+
+  console.log("updateCoordinate:", updateCoordinate);
+
   return (
     <LocationContext.Provider
-      value={{ locations, registerLocation, deleteLocation, updateLocation }}
+      value={{
+        locations,
+        registerLocation,
+        deleteLocation,
+        updateLocation,
+        updateCoordinate,
+        coordinate,
+      }}
     >
       {children}
     </LocationContext.Provider>
