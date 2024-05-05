@@ -33,3 +33,10 @@ Nesta página você tem acesso para editar, excluir alguma localização (caso f
 A página de cadastro de ponto de coleta pede que o usuário insira as informações necessárias sobre a localização, junto também de seu identificador para que sua conta e cadastro feito sejam vinculados.
 
 ![cadastro](https://github.com/vhasckel/ecoponto/assets/85519759/67de6425-12cb-4943-a0de-ae4c6a576b3a)
+
+## Tecnologias Utilizadas
+
+https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white
+https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
