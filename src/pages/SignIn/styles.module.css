@@ -13,7 +13,26 @@
 
 .form {
     padding: 1em;
+}
 
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo img {
+    width: 34px;
+    margin-top: -1em;
+    margin-left: 10px;
+}
+
+.mobileScreen {
+    color: #4caa66;
+}
+
+.eco {
+    color: black;
 }
 
 
@@ -32,11 +51,29 @@
         height: 100vh;
     }
 
+    .logo {
+        display: flex;
+        flex-direction: row;
+        width: 10em;
+        gap: 5px;
+        padding: 2em;
+        color: #4caa66;
+    }
+
+    .logo img {
+        width: 34px;
+        margin-top: -1em;
+    }
+
 
     .form {
         width: 50%;
         padding: 1em;
 
+    }
+
+    .mobileScreen {
+        display: none;
     }
 }
 
