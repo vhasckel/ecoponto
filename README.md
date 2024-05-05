@@ -36,7 +36,10 @@ A página de cadastro de ponto de coleta pede que o usuário insira as informaç
 
 ## Tecnologias Utilizadas
 
-![node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![mui](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
-![react-router-dom](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) permite a execução de código JavaScript fora do navegador e inclui um gerenciador de pacotes
+
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) biblioteca para construir toda a estrutura da aplicação
+
+![mui](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white) biblioteca para estilização, com componentes já prontos para uso e responssivos
+
+![react-router-dom](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) biblioteca para a criação de rotas públicas, privadas e dinâmicas.
