@@ -7,6 +7,7 @@ import {
 import { LocationContextProvider } from "./context/LocationContext.jsx";
 import { CoordinateProvider } from "./context/CoordinatesContext.jsx";
 import { UserContextProvider } from "./context/UserContext.jsx";
+
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/Home/index.jsx";
 import SignInPage from "./pages/SignIn/index.jsx";

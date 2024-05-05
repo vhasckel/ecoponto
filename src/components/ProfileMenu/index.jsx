@@ -1,15 +1,14 @@
 import { Avatar } from "@mui/material";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
+import { Link } from "react-router-dom";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
-import UserAvatar from "../UserAvatar";
 
-function ProfileMenu({ user }) {
+function ProfileMenu() {
   const { logOut, deleteAccount } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);

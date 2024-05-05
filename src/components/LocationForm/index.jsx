@@ -68,14 +68,14 @@ function LocationForm() {
   }, [id, locations, setValue]);
 
   const onSubmit = (data) => {
-    setFormSubmitted(true); // Indicar que uma tentativa de submissão foi feita
+    setFormSubmitted(true);
 
-    // Verificar se pelo menos um checkbox está selecionado
+    // verifica se pelo menos um checkbox está selecionado
     const selectedCheckboxCount =
       Object.values(selectedCheckboxes).filter(Boolean).length;
 
     if (selectedCheckboxCount === 0) {
-      return; // Não submeter o formulário se não houver itens selecionados
+      return;
     }
 
     const longitude = parseFloat(data.longitude);
@@ -91,23 +91,12 @@ function LocationForm() {
     };
 
     if (isEditing) {
-      // Atualizar localização
       updateLocation(id, submissionData);
     } else {
-      // Registrar nova localização
       registerLocation(submissionData);
     }
 
-    if (id) {
-      // Se temos um ID, significa que estamos editando
-      console.log(id);
-      updateLocation(id, submissionData);
-    } else {
-      // Se não temos um ID, estamos criando um novo
-      registerLocation(submissionData);
-    }
-
-    navigate("/"); // Redirecionar após salvar
+    navigate("/");
   };
 
   return (

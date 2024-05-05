@@ -1,14 +1,10 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import {
-  CoordinateContext,
-  useCoordinate,
-} from "../../context/CoordinatesContext";
 import { useContext, useEffect } from "react";
 import { LocationContext } from "../../context/LocationContext";
+import { useLocation } from "react-router-dom";
 
 import styles from "./styles.module.css";
-import { useLocation } from "react-router-dom";
 
 function Map() {
   const { locations, updateCoordinate, coordinate } =
@@ -37,7 +33,7 @@ function Map() {
   const position = [coordinate.latitude, coordinate.longitude];
   return (
     <div className={styles.container}>
-      <MapContainer center={position} zoom={12} scrollWheelZoom={true}>
+      <MapContainer center={position} zoom={15} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -12,6 +12,8 @@ export const CoordinateProvider = ({ children }) => {
     setCoordinate(newLocation);
   };
 
+  console.log("updateCoordinate contexto:", updateCoordinate);
+
   return (
     <CoordinateContext.Provider value={{ coordinate, updateCoordinate }}>
       {children}

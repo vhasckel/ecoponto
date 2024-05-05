@@ -4,6 +4,7 @@ import UserAvatar from "../UserAvatar";
 import styles from "./styles.module.css";
 
 function UserCard({ user }) {
+  //função para pegar a inicial do nome e sobrenome do usuário para estilizar o avatar
   function extractInitials(name) {
     const names = name.split(" ");
     if (names.length === 1) {
