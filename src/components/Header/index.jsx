@@ -16,14 +16,14 @@ function Header() {
         </Link>
       </div>
       <div className={styles.navigation}>
-        <div className={styles.linksDesktop}>
+        {/* <div className={styles.linksDesktop}>
           <Link to="/lista-de-localizacoes">
             <NavigationLink text={"Pontos de Coleta"} />
           </Link>
           <Link to="/cadastrar-localizacao">
             <NavigationLink text={"Cadastrar ponto de coleta"} />
           </Link>
-        </div>
+        </div> */}
       </div>
       <ProfileMenu />
     </header>

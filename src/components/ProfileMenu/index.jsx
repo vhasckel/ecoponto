@@ -7,8 +7,9 @@ import MenuItem from "@mui/material/MenuItem";
 
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import UserAvatar from "../UserAvatar";
 
-function ProfileMenu() {
+function ProfileMenu({ user }) {
   const { logOut, deleteAccount } = useContext(UserContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -28,9 +29,7 @@ function ProfileMenu() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-      >
-        VH
-      </Avatar>
+      ></Avatar>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}

@@ -17,15 +17,19 @@ function UserCard({ user }) {
   const initials = extractInitials(name);
 
   return (
-    <div className={styles.container}>
-      <UserAvatar initials={initials} />
-      <div className={styles.info}>
-        <Typography variant="subtitle1" color="text.secondary">
-          {online ? "Online" : "Offline"}
-        </Typography>
-        <Typography variant="subtitle1">{name}</Typography>
-      </div>
-    </div>
+    <>
+      {online && (
+        <div className={styles.container}>
+          <UserAvatar initials={initials} />
+          <div className={styles.info}>
+            <Typography variant="subtitle1" color="text.secondary">
+              online
+            </Typography>
+            <Typography variant="subtitle1">{name}</Typography>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

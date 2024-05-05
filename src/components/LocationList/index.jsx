@@ -16,9 +16,12 @@ function LocationList({ showButtons }) {
   const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const handleEdit = (id, latitude, longitude) => {
-    updateCoordinate({ latitude, longitude }); // Atualizar as coordenadas no contexto
-    navigate(`/editar-localizacao/${id}`); // Redirecionar para a página de edição
+  const handleEdit = (id) => {
+    navigate(`/editar-localização/${id}`);
+  };
+
+  const handleDelete = (id) => {
+    deleteLocation(id);
   };
 
   const goToMap = (latitude, longitude) => {
@@ -60,25 +63,12 @@ function LocationList({ showButtons }) {
                     fontWeight: "700",
                   }}
                 />
-                <button
-                  onClick={() =>
-                    handleEdit(
-                      location.id,
-                      location.latitude,
-                      location.longitude
-                    )
-                  }
-                >
-                  Editar
-                </button>
+                <CButton
+                  text="Acessar"
+                  onClick={() => goToMap(location.latitude, location.longitude)}
+                />
               </div>
             )}
-
-          <button
-            onClick={() => goToMap(location.latitude, location.longitude)}
-          >
-            Ir para o Mapa
-          </button>
           <Divider variant="fullWidth " />
         </article>
       ))}
