@@ -47,3 +47,4 @@ A página de cadastro de ponto de coleta pede que o usuário insira as informaç
 ## Melhorias
 - Melhorar a interação entre os usuários.
 - Login através de outras plataformas como google, facebook etc.
+- Refatoração de código e maior componentização.
