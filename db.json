@@ -13,45 +13,119 @@
       "street": "Travessa Pipira",
       "password": "Eg+0!gBY",
       "state": "AM",
+      "online": false
+    },
+    {
+      "id": "cfed",
+      "name": "Kamilla Sell",
+      "gender": "SC",
+      "cpf": "58994630074",
+      "birth": "04/10/2000",
+      "email": "kamilla@email.com",
+      "cep": "88053517",
+      "city": "Florianópolis",
+      "neighborhood": "Jurerê",
+      "street": "Rua dos Pirambus",
+      "password": "Kamilla123",
+      "state": "SC",
       "online": true
     },
     {
-      "id": "64a3",
-      "name": "teste",
+      "id": "8e01",
+      "name": "Bruna Hasckel",
       "gender": "SC",
-      "cpf": "09985444930",
-      "birth": "09052000",
-      "email": "teste@email.com",
-      "cep": "88036280",
+      "cpf": "98139616001",
+      "birth": "10/11/2005",
+      "email": "bruna@email.com",
+      "cep": "88063246",
       "city": "Florianópolis",
-      "neighborhood": "Trindade",
-      "street": "Rua Professora Enoé Schutel",
-      "password": "Teste123",
-      "state": "SC"
+      "neighborhood": "Campeche",
+      "street": "Travessa Anna Infância Daniel",
+      "password": "Bruna123",
+      "state": "SC",
+      "online": true
+    },
+    {
+      "id": "7ba3",
+      "name": "Laís Barcelos",
+      "gender": "SC",
+      "cpf": "39139787044",
+      "birth": "09/06/2000",
+      "email": "lais@email.com",
+      "cep": "88048300",
+      "city": "Florianópolis",
+      "neighborhood": "Rio Tavares",
+      "street": "Rodovia Doutor Antônio Luiz Moura Gonzaga",
+      "password": "Lais1234",
+      "state": "SC",
+      "online": true
+    },
+    {
+      "id": "33dd",
+      "name": "Pétula Rodrigues",
+      "gender": "SC",
+      "cpf": "39261602096",
+      "birth": "21/11/1974",
+      "email": "petula@email.com",
+      "cep": "88066400",
+      "city": "Florianópolis",
+      "neighborhood": "Armação do Pântano do Sul",
+      "street": "Avenida Antônio Borges dos Santos",
+      "password": "Petula123",
+      "state": "SC",
+      "online": true
+    },
+    {
+      "id": "5450",
+      "name": "Clarice Lispector",
+      "gender": "SC",
+      "cpf": "31584177071",
+      "birth": "10/11/1920",
+      "email": "clarice@email.com",
+      "cep": "88051480",
+      "city": "Florianópolis",
+      "neighborhood": "Sambaqui",
+      "street": "Servidão Ewaldo Mosimann",
+      "password": "Clarice123",
+      "state": "SC",
+      "online": true
+    },
+    {
+      "id": "4782",
+      "name": "Hilda Hilst",
+      "gender": "SC",
+      "cpf": "53640479033",
+      "birth": "21/04/1921",
+      "email": "hilda@email.com",
+      "cep": "88066026",
+      "city": "Florianópolis",
+      "neighborhood": "Campeche",
+      "street": "Servidão Dona Vitorina Lopes",
+      "password": "Hilda123",
+      "state": "SC",
+      "online": true
     }
   ],
   "locations": [
     {
       "id": "02b8",
       "cep": "88040900",
-      "city": "Florianópolis",
+      "city": "",
       "neighborhood": "Trindade",
-      "state": "SC",
+      "state": "",
       "street": "Rua Roberto Sampaio Gonzaga",
       "latitude": "-27.604258",
       "longitude": "-48.529526",
       "description": "",
       "userId": "09985444930",
       "vidro": false,
-      "metal": true,
+      "metal": false,
       "papel": false,
       "plastico": false,
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "metal"
-      ]
+      "wasteTypes": ["metal"]
     },
     {
       "id": "2428",
@@ -64,16 +138,14 @@
       "longitude": "-51.196651",
       "description": "teste",
       "userId": "09985444930",
-      "vidro": true,
+      "vidro": false,
       "metal": false,
       "papel": false,
       "plastico": false,
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "vidro"
-      ]
+      "wasteTypes": ["vidro"]
     },
     {
       "id": "36c2",
@@ -93,9 +165,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "vidro"
-      ]
+      "wasteTypes": ["vidro"]
     },
     {
       "id": "9514",
@@ -115,9 +185,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "vidro"
-      ]
+      "wasteTypes": ["vidro"]
     },
     {
       "id": "3bf0",
@@ -137,9 +205,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "vidro"
-      ]
+      "wasteTypes": ["vidro"]
     }
   ]
 }
