@@ -1,5 +1,4 @@
 .container {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,13 +7,4 @@
 
 .container h1 {
     padding: 1em;
-}
-
-@media(min-width: 769px) {
-    .container {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }

@@ -6,7 +6,7 @@ function LocationPage() {
   return (
     <div className={styles.container}>
       <h2>Pontos de Coleta</h2>
-      <LocationList showButtons={true} />;
+      <LocationList showButtons={true} />
     </div>
   );
 }

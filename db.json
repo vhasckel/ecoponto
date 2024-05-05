@@ -1,23 +1,8 @@
 {
   "users": [
     {
-      "id": "473c",
-      "name": "Heygenul",
-      "gender": "AM",
-      "cpf": "51093205008",
-      "birth": "03/02/2000",
-      "email": "Heygenul@email.com",
-      "cep": "69099787",
-      "city": "Manaus",
-      "neighborhood": "Cidade de Deus",
-      "street": "Travessa Pipira",
-      "password": "Eg+0!gBY",
-      "state": "AM",
-      "online": false
-    },
-    {
       "id": "cfed",
-      "name": "Kamilla Sell",
+      "name": "Simone de Beauvoir",
       "gender": "SC",
       "cpf": "58994630074",
       "birth": "04/10/2000",
@@ -32,7 +17,7 @@
     },
     {
       "id": "8e01",
-      "name": "Bruna Hasckel",
+      "name": "Samanta Schweblin",
       "gender": "SC",
       "cpf": "98139616001",
       "birth": "10/11/2005",
@@ -47,7 +32,7 @@
     },
     {
       "id": "7ba3",
-      "name": "Laís Barcelos",
+      "name": "Donna Haraway",
       "gender": "SC",
       "cpf": "39139787044",
       "birth": "09/06/2000",
@@ -62,7 +47,7 @@
     },
     {
       "id": "33dd",
-      "name": "Pétula Rodrigues",
+      "name": "Elena Ferrante",
       "gender": "SC",
       "cpf": "39261602096",
       "birth": "21/11/1974",
@@ -139,10 +124,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "vidro",
-        "metal"
-      ]
+      "wasteTypes": ["vidro", "metal"]
     },
     {
       "id": "358e",
@@ -162,10 +144,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "papel",
-        "plastico"
-      ]
+      "wasteTypes": ["papel", "plastico"]
     },
     {
       "id": "648f",
@@ -185,10 +164,7 @@
       "organico": true,
       "baterias": true,
       "oleo_de_cozinha": false,
-      "wasteTypes": [
-        "organico",
-        "baterias"
-      ]
+      "wasteTypes": ["organico", "baterias"]
     },
     {
       "id": "efc1",
@@ -208,9 +184,7 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": true,
-      "wasteTypes": [
-        "oleo_de_cozinha"
-      ]
+      "wasteTypes": ["oleo_de_cozinha"]
     }
   ]
 }

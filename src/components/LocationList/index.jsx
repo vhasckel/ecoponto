@@ -45,6 +45,16 @@ function LocationList({ showButtons }) {
             currentUser.cpf === location.userId && (
               <div className={styles.btns}>
                 <CButton
+                  text="Acessar"
+                  style={{
+                    borderRadius: "20px",
+                    fontSize: ".8em",
+                    fontWeight: "700",
+                    backgroundColor: "#4caa66",
+                  }}
+                  onClick={() => goToMap(location.latitude, location.longitude)}
+                />
+                <CButton
                   onClick={() => handleEdit(location.id)}
                   text="Editar"
                   style={{
@@ -62,10 +72,6 @@ function LocationList({ showButtons }) {
                     fontSize: ".8em",
                     fontWeight: "700",
                   }}
-                />
-                <CButton
-                  text="Acessar"
-                  onClick={() => goToMap(location.latitude, location.longitude)}
                 />
               </div>
             )}
