@@ -124,7 +124,10 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": ["vidro", "metal"]
+      "wasteTypes": [
+        "vidro",
+        "metal"
+      ]
     },
     {
       "id": "358e",
@@ -144,7 +147,10 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": false,
-      "wasteTypes": ["papel", "plastico"]
+      "wasteTypes": [
+        "papel",
+        "plastico"
+      ]
     },
     {
       "id": "648f",
@@ -164,7 +170,10 @@
       "organico": true,
       "baterias": true,
       "oleo_de_cozinha": false,
-      "wasteTypes": ["organico", "baterias"]
+      "wasteTypes": [
+        "organico",
+        "baterias"
+      ]
     },
     {
       "id": "efc1",
@@ -184,7 +193,31 @@
       "organico": false,
       "baterias": false,
       "oleo_de_cozinha": true,
-      "wasteTypes": ["oleo_de_cozinha"]
+      "wasteTypes": [
+        "oleo_de_cozinha"
+      ]
+    },
+    {
+      "id": "a219",
+      "cep": "88058250",
+      "city": "Florianópolis",
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "state": "SC",
+      "street": "Rua Nivaldo Alfredo Silva",
+      "latitude": "-27.443803",
+      "longitude": "-48.405909",
+      "description": "Próximo ao Futura Suprimentos",
+      "userId": "13092719093",
+      "vidro": true,
+      "metal": false,
+      "papel": false,
+      "plastico": false,
+      "organico": false,
+      "baterias": false,
+      "oleo_de_cozinha": false,
+      "wasteTypes": [
+        "vidro"
+      ]
     }
   ]
 }
