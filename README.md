@@ -51,4 +51,4 @@ A página de cadastro de ponto de coleta pede que o usuário insira as informaç
 
 ## Vídeo
 
-![video](https://drive.google.com/drive/folders/1jF3tprZUZHSbhF83pixWgnL1LSHxL7bm)
+https://drive.google.com/drive/folders/1jF3tprZUZHSbhF83pixWgnL1LSHxL7bm
